@@ -12,4 +12,4 @@ Monitorear los datos, crear controles manuales y automaticos
 * topico de control: proyecto/xxxxx/comandos
 * topico de datos: proyecto/xxxxx/datos/luz
 ## TODO
-* Probar conexiones fisicas [X]
+* [x] Probar conexiones fisicas
