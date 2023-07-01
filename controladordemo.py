@@ -1,13 +1,19 @@
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
 # SPDX-License-Identifier: MIT
 import time
-from random import randint
 
 import ssl
 import socketpool
 import wifi
 import adafruit_minimqtt.adafruit_minimqtt as MQTT
 from adafruit_io.adafruit_io import IO_MQTT
+import board
+from ideaboard import IdeaBoard
+
+ib = IdeaBoard()
+
+luz = ib.AnalogIn(board.IO34)
+servo = ib.Servo(board.IO4)
 
 ### WiFi ###
 
@@ -38,9 +44,9 @@ def connected(client):
     # This is a good place to subscribe to feed changes.  The client parameter
     # passed to this function is the Adafruit IO MQTT client so you can make
     # calls against it easily.
-    print("Connected to Adafruit IO!  Listening for DemoFeed changes...")
-    # Subscribe to changes on a feed named DemoFeed.
-    client.subscribe("DemoFeed")
+    print("Connected to Adafruit IO!  Listening for comandos changes...")
+    # Subscribe to changes on a feed.
+    client.subscribe("comandos")
 
 
 def subscribe(client, userdata, topic, granted_qos):
