@@ -71,6 +71,8 @@ def message(client, feed_id, payload):
     # The feed_id parameter identifies the feed, and the payload parameter has
     # the new value.
     print("Feed {0} received new value: {1}".format(feed_id, payload))
+    if feed_id == "comandos":
+        servo.angle = float(payload)
 
 
 # Create a socket pool
