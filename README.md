@@ -13,3 +13,7 @@ Monitorear los datos, crear controles manuales y automaticos
 * topico de datos: proyecto/xxxxx/datos/luz
 ## TODO
 * [x] Probar conexiones fisicas
+* [ ] Crear el codigo base (usando el ejemplo de Adafruit IO)
+* [ ] Graficar los datos de luz en Adafruit IO
+* [ ] Controlar el servo desde Adafruit IO
+* [ ] Agregar logica de control
