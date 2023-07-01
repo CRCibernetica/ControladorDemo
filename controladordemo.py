@@ -108,7 +108,7 @@ while True:
     io.loop()
     # Send a new message every 10 seconds.
     if (time.monotonic() - last) >= 10:
-        value = randint(0, 100)
-        print("Publishing {0} to DemoFeed.".format(value))
-        io.publish("DemoFeed", value)
+        value = luz.value
+        print("Publishing {0} to luz.".format(value))
+        io.publish("luz", value)
         last = time.monotonic()
