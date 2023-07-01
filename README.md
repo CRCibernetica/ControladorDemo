@@ -10,7 +10,7 @@ Monitorear los datos, crear controles manuales y automaticos
 ## Monitoreo/HMI (Adafruit IO o Node-RED)
 Empezamos con Adafruit IO y luego una version de Node-Red
 ## Topicos de MQTT
-### Topicos MQTT 
+### Topicos MQTT puro
 * topico de control: proyecto/xxxxx/comandos
 * topico de datos: proyecto/xxxxx/datos/luz
 ### Adafruit IO
