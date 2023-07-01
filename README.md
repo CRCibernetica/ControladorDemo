@@ -8,6 +8,7 @@ Monitorear los datos, crear controles manuales y automaticos
 ## Salidas
 * Servomotor --> board.IO4
 ## Monitoreo/HMI (Adafruit IO o Node-RED)
+Empezamos con Adafruit IO y luego una version de Node-Red
 ## Topicos de MQTT
 * topico de control: proyecto/xxxxx/comandos
 * topico de datos: proyecto/xxxxx/datos/luz
