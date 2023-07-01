@@ -72,7 +72,10 @@ def message(client, feed_id, payload):
     # the new value.
     print("Feed {0} received new value: {1}".format(feed_id, payload))
     if feed_id == "comandos":
-        servo.angle = float(payload)
+        if payload == "ON":
+            servo.angle = 160
+        elif payload == "OFF":
+            servo.angle = 20
 
 
 # Create a socket pool
