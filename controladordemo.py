@@ -47,6 +47,7 @@ def connected(client):
     print("Connected to Adafruit IO!  Listening for comandos changes...")
     # Subscribe to changes on a feed.
     client.subscribe("comandos")
+    client.subscribe("modos")
 
 
 def subscribe(client, userdata, topic, granted_qos):
@@ -105,15 +106,25 @@ io.on_message = message
 print("Connecting to Adafruit IO...")
 io.connect()
 
+valores_luz = []
+promedio = 0
+
 # Below is an example of manually publishing a new  value to Adafruit IO.
 last = 0
 print("Publishing a new message every 10 seconds...")
 while True:
     # Explicitly pump the message loop.
-    io.loop()
+    io.loop(0.1)
+    
+    valores_luz.append(luz.value)
+    if len(valores_luz) > 20:
+        valores_luz.pop(0)
+        
+    promedio = sum(valores_luz) / len(valores_luz)
+    
     # Send a new message every 10 seconds.
     if (time.monotonic() - last) >= 10:
-        value = luz.value
+        value = promedio
         print("Publishing {0} to luz.".format(value))
         io.publish("luz", value)
         last = time.monotonic()

@@ -21,4 +21,5 @@ Empezamos con Adafruit IO y luego una version de Node-Red
 * [x] Crear el codigo base (usando el ejemplo de Adafruit IO)
 * [x] Graficar los datos de luz en Adafruit IO
 * [x] Controlar el servo desde Adafruit IO
-* [ ] Agregar logica de control
+* [x] Agregar logica de control
+* [ ] Agregar modo manual / automatico
